@@ -1,4 +1,4 @@
-## 재귀 구조로 연결한 연결리스트 풀이
+## 재귀 구조를 이용한 연결리스트 풀이
 
 ### leetcode 21. Merge Two Sorted Lists
 

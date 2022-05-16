@@ -2,7 +2,7 @@
 
 ### leetcode 234. Palindrome Linked List
 
-앞뒤가 대칭으로 똑같은 연결리스트일 경우 true, 아닐경우 false 출력
+앞뒤 대칭으로 똑같은 연결리스트일 경우 true, 아닐경우 false 출력
 
 **Runner 기법**   
 런너를 두개 설정 -> 빠른런너, 느린런너  

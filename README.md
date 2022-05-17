@@ -16,16 +16,19 @@
 자료구조 공부한 내용  
 * [힙큐 알고리즘](https://github.com/keongmini/Today-I-Learned/blob/master/DataStructure/Heapq.md)
 * [해시테이블](https://github.com/keongmini/Today-I-Learned/blob/master/DataStructure/HashTable.md)
+* [그래프 자료구조: DFS, BFS](https://github.com/keongmini/Today-I-Learned/blob/master/DataStructure/Graph.md)
 
 ### Study
 웹개발하면서 배운 내용  
 * [MVC패턴, MVVM 패턴](https://github.com/keongmini/Today-I-Learned/blob/master/Study/Design-pattern.md)
 * [RDB vs NoSQL](https://github.com/keongmini/Today-I-Learned/blob/master/Study/RDB_vs_NoSQL.md)
+* [422 vs 400](https://github.com/keongmini/Today-I-Learned/blob/master/Study/server-error.md)
 
 ### TroubleShooting
 개발하면서 발생한 문제 해결 과정
 * [express-validator의 validationResult](https://github.com/keongmini/Today-I-Learned/blob/master/TroubleShooting/express-validator.md)
 * [api errorhanlding 정확하게 하기](https://github.com/keongmini/Today-I-Learned/blob/master/TroubleShooting/api-ErrorHandling.md)
+* [axiod errorhandling 정확하게 하기](https://github.com/keongmini/Today-I-Learned/blob/master/TroubleShooting/axios-ErrorHandling.md)
 
 ### git
 git 사용하며 배운 내용

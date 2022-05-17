@@ -51,3 +51,16 @@ responsible for
 [MVC](https://developer.mozilla.org/ko/docs/Glossary/MVC)  
 [NodeJS - The Complete Guide](https://www.udemy.com/course/nodejs-the-complete-guide/)
 [MVVM 패턴](https://velog.io/@k7120792/Model-View-ViewModel-Pattern)
+
+
+
+---
+파트너사 페이지 개발하기 전에 mvvm패턴을 도입할지 결정하기 위해 공부했다. 현재는 mvc 패턴을 이용하는 중
+
+mvvm패턴을 완벽히 이해한건 아니지만(mvc패턴도 여러번 공부할 때 이해가 안됐지만 막상 써보니까 이해가 됐다.) 개발에 도입하려고 여러개 찾아보다보니까 결론은 redux를 사용하면 굳이 사용하지 않아도 된다는 거였다. 
+
+mvvm패턴과 리액트를 같이 설명하는 블로그 글에 나온 예시를 보면 결국 dispatch, useSelector 역할을 뷰모델이 해주는거였는데 지금 RTK로 충분히 쓰고 있어서 도입하지 않기로 했다. 
+
+또한, observer 패턴이 필요해서 RX, mvvm패턴 등의 얘기가 나온거라고 그랬는데..(맞는지 모르겠다..) redux에서도 observer 패턴을 제공하고 있다.
+
+**참고.** [[****Observer pattern in React using Redux]****](https://medium.com/@jackwong_60367/observer-pattern-in-react-using-redux-ca9998e885b0)

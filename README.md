@@ -13,10 +13,21 @@
 * [원형큐 구현](https://github.com/keongmini/Today-I-Learned/blob/master/Algorithm/Circular-Queue.md)
 
 ### DataStructure
-자료구조 공부힌 내용  
+자료구조 공부한 내용  
 * [힙큐 알고리즘](https://github.com/keongmini/Today-I-Learned/blob/master/DataStructure/Heapq.md)
+* [해시테이블](https://github.com/keongmini/Today-I-Learned/blob/master/DataStructure/HashTable.md)
 
 ### Study
 웹개발하면서 배운 내용  
 * [MVC패턴, MVVM 패턴](https://github.com/keongmini/Today-I-Learned/blob/master/Study/Design-pattern.md)
 * [RDB vs NoSQL](https://github.com/keongmini/Today-I-Learned/blob/master/Study/RDB_vs_NoSQL.md)
+
+### TroubleShooting
+개발하면서 발생한 문제 해결 과정
+* [express-validator의 validationResult](https://github.com/keongmini/Today-I-Learned/blob/master/TroubleShooting/express-validator.md)
+* [api errorhanlding 정확하게 하기](https://github.com/keongmini/Today-I-Learned/blob/master/TroubleShooting/api-ErrorHandling.md)
+
+### git
+git 사용하며 배운 내용
+* [Git Flow](https://github.com/keongmini/Today-I-Learned/blob/master/git/gitflow.md)
+* [git bash를 이용한 login](https://github.com/keongmini/Today-I-Learned/blob/master/git/github-login.md)

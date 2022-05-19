@@ -86,10 +86,10 @@ const UserRoute = ({ component: Component, rest }) => {
 
 
 **참고** 
-[로그인 인증방식](https://velog.io/@gusdnr814/%EB%A1%9C%EA%B7%B8%EC%9D%B8-%EC%9D%B8%EC%A6%9D-4%EA%B0%80%EC%A7%80-%EB%B0%A9%EB%B2%95)
-[프론트에서 안전하게 로그인 처리하기](https://velog.io/@yaytomato/%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%90%EC%84%9C-%EC%95%88%EC%A0%84%ED%95%98%EA%B2%8C-%EB%A1%9C%EA%B7%B8%EC%9D%B8-%EC%B2%98%EB%A6%AC%ED%95%98%EA%B8%B0)
-[React Router 권한 제어](https://ejko0911.medium.com/react-router-%EA%B6%8C%ED%95%9C-%EC%A0%9C%EC%96%B4-92ef817730b1)
-[리액트 라우터를 활용한 권한별 라우팅 제어](https://jeonghwan-kim.github.io/dev/2020/03/20/role-based-react-router.html)
+[로그인 인증방식](https://velog.io/@gusdnr814/%EB%A1%9C%EA%B7%B8%EC%9D%B8-%EC%9D%B8%EC%A6%9D-4%EA%B0%80%EC%A7%80-%EB%B0%A9%EB%B2%95)  
+[프론트에서 안전하게 로그인 처리하기](https://velog.io/@yaytomato/%ED%94%84%EB%A1%A0%ED%8A%B8%EC%97%90%EC%84%9C-%EC%95%88%EC%A0%84%ED%95%98%EA%B2%8C-%EB%A1%9C%EA%B7%B8%EC%9D%B8-%EC%B2%98%EB%A6%AC%ED%95%98%EA%B8%B0)  
+[React Router 권한 제어](https://ejko0911.medium.com/react-router-%EA%B6%8C%ED%95%9C-%EC%A0%9C%EC%96%B4-92ef817730b1)  
+[리액트 라우터를 활용한 권한별 라우팅 제어](https://jeonghwan-kim.github.io/dev/2020/03/20/role-based-react-router.html)  
   
 
 ### 추가적으로 구현할 내용

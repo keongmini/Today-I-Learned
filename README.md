@@ -18,11 +18,17 @@
 * [해시테이블](https://github.com/keongmini/Today-I-Learned/blob/master/DataStructure/HashTable.md)
 * [그래프 자료구조: DFS, BFS](https://github.com/keongmini/Today-I-Learned/blob/master/DataStructure/Graph.md)
 
+### Front
+front 개발시 공부한 내용, 라이브러리 사용법
+* [redux-toolkit](https://github.com/keongmini/Today-I-Learned/blob/master/Front/Redux-toolkit.md)
+* [redux-persist](https://github.com/keongmini/Today-I-Learned/blob/master/Front/Redux-persist.md)
+
 ### Study
 웹개발하면서 배운 내용  
 * [MVC패턴, MVVM 패턴](https://github.com/keongmini/Today-I-Learned/blob/master/Study/Design-pattern.md)
 * [RDB vs NoSQL](https://github.com/keongmini/Today-I-Learned/blob/master/Study/RDB_vs_NoSQL.md)
 * [422 vs 400](https://github.com/keongmini/Today-I-Learned/blob/master/Study/server-error.md)
+* [비밀번호 암호화하기](https://github.com/keongmini/Today-I-Learned/blob/master/Study/keep-password.md)
 
 ### TroubleShooting
 개발하면서 발생한 문제 해결 과정

@@ -23,6 +23,10 @@ front 개발시 공부한 내용, 라이브러리 사용법
 * [redux-toolkit](https://github.com/keongmini/Today-I-Learned/blob/master/Front/Redux-toolkit.md)
 * [redux-persist](https://github.com/keongmini/Today-I-Learned/blob/master/Front/Redux-persist.md)
 
+### SQL
+SQL 공부 내용
+* [다중 테이블 조회 방법 - JOIN](https://github.com/keongmini/Today-I-Learned/blob/master/SQL/join-types.md)
+
 ### Study
 웹개발하면서 배운 내용  
 * [MVC패턴, MVVM 패턴](https://github.com/keongmini/Today-I-Learned/blob/master/Study/Design-pattern.md)
@@ -38,6 +42,7 @@ front 개발시 공부한 내용, 라이브러리 사용법
 * [api errorhanlding 정확하게 하기](https://github.com/keongmini/Today-I-Learned/blob/master/TroubleShooting/api-ErrorHandling.md)
 * [axiod errorhandling 정확하게 하기](https://github.com/keongmini/Today-I-Learned/blob/master/TroubleShooting/axios-ErrorHandling.md)
 * [bcrypt를 이용하여 해시된 비밀번호 비교하기](https://github.com/keongmini/Today-I-Learned/blob/master/TroubleShooting/encrypt-password.md)
+* [express-validator validation chain 으로 조건별 유효성 검사하기](https://github.com/keongmini/Today-I-Learned/blob/master/TroubleShooting/express-validator-validation.md)
 
 ### git
 git 사용하며 배운 내용

@@ -29,12 +29,15 @@ front 개발시 공부한 내용, 라이브러리 사용법
 * [RDB vs NoSQL](https://github.com/keongmini/Today-I-Learned/blob/master/Study/RDB_vs_NoSQL.md)
 * [422 vs 400](https://github.com/keongmini/Today-I-Learned/blob/master/Study/server-error.md)
 * [비밀번호 암호화하기](https://github.com/keongmini/Today-I-Learned/blob/master/Study/keep-password.md)
+* [접근권한 인증방식](https://github.com/keongmini/Today-I-Learned/blob/master/Study/authorization-manage.md)
+* [webview - javascript bridge](https://github.com/keongmini/Today-I-Learned/tree/master/Study)
 
 ### TroubleShooting
 개발하면서 발생한 문제 해결 과정
 * [express-validator의 validationResult](https://github.com/keongmini/Today-I-Learned/blob/master/TroubleShooting/express-validator.md)
 * [api errorhanlding 정확하게 하기](https://github.com/keongmini/Today-I-Learned/blob/master/TroubleShooting/api-ErrorHandling.md)
 * [axiod errorhandling 정확하게 하기](https://github.com/keongmini/Today-I-Learned/blob/master/TroubleShooting/axios-ErrorHandling.md)
+* [bcrypt를 이용하여 해시된 비밀번호 비교하기](https://github.com/keongmini/Today-I-Learned/blob/master/TroubleShooting/encrypt-password.md)
 
 ### git
 git 사용하며 배운 내용

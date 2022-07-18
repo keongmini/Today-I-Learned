@@ -35,7 +35,8 @@ SQL 공부 내용
 * [422 vs 400](https://github.com/keongmini/Today-I-Learned/blob/master/Study/server-error.md)
 * [비밀번호 암호화하기](https://github.com/keongmini/Today-I-Learned/blob/master/Study/keep-password.md)
 * [접근권한 인증방식](https://github.com/keongmini/Today-I-Learned/blob/master/Study/authorization-manage.md)
-* [webview - javascript bridge](https://github.com/keongmini/Today-I-Learned/tree/master/Study)
+* [webview - javascript bridge](https://github.com/keongmini/Today-I-Learned/blob/master/Study/javascript-bridge.md)
+* [server 인증방식](https://github.com/keongmini/Today-I-Learned/blob/master/Study/Authentication.md)
 
 ### TroubleShooting
 개발하면서 발생한 문제 해결 과정

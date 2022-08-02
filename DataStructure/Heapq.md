@@ -14,6 +14,10 @@
   <em>출처: https://ko.wikipedia.org/wiki/%ED%8A%B8%EB%A6%AC_%EA%B5%AC%EC%A1%B0 </em>
 </p>
 
+* 힙은 정렬된 구조가 아님 -> 부모노드가 항상 자식노드보가 크거나 작다는 조건만 만족할 뿐, 정렬 x -> 부모와 자식 간 관계만 정의, 좌우 관계 상관x  
+* 이진 힙: 자식이 둘인 힙  
+* 
+
 
 1. 힙의 종류
   * 최대힙 (Max Heap)  
@@ -51,3 +55,19 @@ import heap
 * **heapify(list)** : list를 힙으로 변환한다.  
 
 > 참고: https://docs.python.org/ko/3/library/heapq.html
+
+4. 최대힙 구현
+힙은 최소힙이 기본값이기 때문에 최대힙은 변형하여 사용해주어야 한다.  
+
+```
+def maxHeap(nums):
+  heap = list()
+  for n in nums:
+    heapq.heappush(heap, -n)
+   
+  for _ in range(len(heap)):
+    print(-heapq.heappop(heap))
+```
+
+값을 음수로 뒤집어서 저장 -> 가장 큰 값에 음수가 붙으면 가장 작은 값이 되기 때문에 최소힙으로 사용가능  
+결과는 다시 음수를 붙여 원래의 값으로 돌려놓은 다음 출력

@@ -51,7 +51,42 @@ dfs(graph, 1, visited)
 **[큐를 이용한 BFS 동작방식]**
 1. 시작노드를 큐에 삽입(방문처리)
 2. 시작노드 큐에서 삭제 -> 시작노드의 인접 노드들을 모두 큐에 삽입
-3. 삽입한 노드 
+3. 삽입한 노드 중 맨 앞에 있는 노드 삭제 -> 삭제한 노드의 인접 노드 삽입
+4. 위 과정을 반복
 
+-> 큐에 기초하여 구현 - collections.deque 사용
+-> O(N)의 시간복잡도 소요
 
+```
+from collections import deque
 
+def bfs(graph, start, visited):
+    queue = deque([start])
+    visited[start] = True
+
+    while queue:
+        v = queue.popleft()
+
+        for i in graph[v]:
+            if not visited[i]:
+                queue.append(i)
+                visited[i] = True
+
+graph = [
+    [],
+    [2,3,8],
+    [1,7],
+    [1,4,5],
+    [3,5],
+    [3,4],
+    [7],
+    [2,6,8],
+    [1,7]
+]
+
+visited = [False] * 9
+
+bfs(graph, 1, visited)
+```
+
+참고: 이것이 취업을 위한 코딩테스트다.

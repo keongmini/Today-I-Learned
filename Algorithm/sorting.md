@@ -44,6 +44,91 @@ print(array)
 3. **퀵정렬**: (가장 많이 사용) 기준을 설정한 다음 큰 수와 작은 수를 교환 후 리스트를 반으로 나누는 동작 방식
    * pivot(피벗): 큰수와 작은수를 교환하기 위한 기준
    * 분할방식:
-      1) 리스트의 ㅇ
+      1) 리스트의 첫번째 값을 피벗으로 설정
+      2) 리스트 왼쪽에서부터 피벗보다 큰 데이터를 선택
+      3) 리스트 오른쪽에서부터 피벗보다 작은 데이터를 선택
+      4) 위에서 선택한 두가지 데이터의 위치를 변경
+      5) 위 과정을 반복하다가 오른쪽에서 찾는 데이터와 왼쪽에서 찾는 데이터의 위치가 엇갈리는 상황 발생 -> 작은 데이터와 **피벗**의 자리를 변경
+      6) 피벗을 기준으로 왼쪽에는 작은 데이터들, 오른쪽에는 큰 데이터들만 남게 됨 -> 각 데이터에 대해 다시 정렬 진행
+   * 재귀함수와 동작 원리 동일 -> 재귀함수로 간결한 코드 구현 가능
+   * 퀵정렬이 끝나는 조건: 데이터의 개수가 1개일때
 
+<p>
+  <img src="https://mkblog.co.kr/wp-content/uploads/2018/05/quickSortStep_modifed-1.png" height="350" /><br/>
+  <em>출처: https://mkblog.co.kr/c-c-plus-quick-sort-algorithm/ </em>
+</p>
 
+```
+# 풀이 1
+array = [5, 7, 9, 0, 3, 1, 6, 2, 4, 8]
+
+def quick_sort(array, start, end):
+    if start >= end: # 종료조건: 데이터가 1개 남았을때
+        return
+
+    pivot = start
+    left = start + 1
+    right = end
+
+    while left <= right:
+        while left <= end and array[left] <= array[pivot]:  # 피벗보다 더 큰 값을 찾을 때까지
+            left += 1
+
+        while right > start and array[right] >= array[pivot]:  # 피벗보다 더 작은 값을 찾을 때까지
+            right -= 1
+
+        if left > right:   # 엇갈린 경우
+            array[right], array[pivot] = array[pivot], array[right]
+        else:
+            array[right], array[left] = array[left], array[right]
+    
+    quick_sort(array, start, right - 1)   # 피벗 기준 작은 데이터들끼리 정렬
+    quick_sort(array, right + 1, end)     # 피벗 기준 큰 데이터들끼리 정렬
+
+quick_sort(array, 0, len(array) - 1)
+print(array)
+```
+
+```
+# 풀이 2
+array = [5, 7, 9, 0, 3, 1, 6, 2, 4, 8]
+
+def quick_sort(array):
+    if len(array) <= 1:
+        return array
+
+    pivot = array[0]
+    tail = array[1:]
+
+    left_side = [x for x in tail if x <= pivot]
+    right_side = [x for x in tail if x > pivot]
+
+    return quick_sort(left_side) + [pivot] + quick_sort(right_side)
+
+print(quick_sort(array))
+```
+
+-> 시간복잡도 O(nlogn): 데이터가 많을수록 다른 방법에 비해 효율적(분할의 횟수가 기하급수적으로 감소하기 때문), 하지만 최악의경우, O(n^2)의 시간복잡도를 갖게됨
+-> 무작위로 입력된 경우 퀵정렬, 이미 데이터가 어느정도 정렬되어있는 경우 삽입정렬
+
+4. **계수정렬**: 별도의 리스트 선언 후 그 안에 정렬에 대한 정보를 담음(비교기반 정렬 알고리즘x)
+   * 선언한 리스트를 (가장 큰 값 - 가장 작은 값 + 1)의 크기로 선언 -> 데이터를 하나씩 확인하면서 각 값들이 몇개 있는지 리스트에 기록 -> 가장 작은 값부터 개수만큼 출력  
+   * 특정한 조건 충족시에만 사용 가능
+      1) 데이터 크기를 정수형태로 표현할 수 있을 때만 사용가능
+      2) 가장 큰 데이터와 가장 작은 데이터의 차이가 너무 크지 않을 때(모든 범위를 담을 수 있는 크기의 리스트를 선언해야 하기 때문)
+
+```
+array = [7, 5, 9, 0, 3, 1, 6, 2, 9, 1, 4, 8, 0, 5, 2]
+
+count = [0] * (max(array) + 1)
+
+for i in range(len(array)):
+    count[array[i]] += 1
+
+for i in range(len(count)):
+    for j in range(count[i]):
+        print(i, end=" ")
+```
+
+-> 시간복잡도: O(n + k)
+-> 공간복잡도:

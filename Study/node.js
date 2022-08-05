@@ -53,5 +53,5 @@ module.exports = {
 console.log('Hello, world!')
 ```
 
-prettierㅗㅇ
-`ㅇ
+prettier와 eslint 사용하는 이유 : 코드를 짜는 중간에 피드백을 줌 -> 빨리 올바른 코딩 습관 형성, 여러 사람이 코드를 관리할 때 혼란없이 같은 규칙을 보면서 작업하기 위해, 룰만 봐도 베스트 프랙티스를 알 수 있음
+

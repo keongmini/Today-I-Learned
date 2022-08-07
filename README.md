@@ -12,12 +12,17 @@
 * [이중연결리스트 구현](https://github.com/keongmini/Today-I-Learned/blob/master/Algorithm/Double-LinkedList.md)
 * [원형큐 구현](https://github.com/keongmini/Today-I-Learned/blob/master/Algorithm/Circular-Queue.md)
 * [트리 bfs로 구현](https://github.com/keongmini/Today-I-Learned/blob/master/Algorithm/Tree.md)
+* [트라이 이해하고 구현하기](https://github.com/keongmini/Today-I-Learned/blob/master/Algorithm/Trie.md)
+* [정렬 알고리즘 문제 풀이 방식](https://github.com/keongmini/Today-I-Learned/blob/master/Algorithm/sorting.md)
 
 ### DataStructure
 자료구조 공부한 내용  
 * [힙큐 알고리즘](https://github.com/keongmini/Today-I-Learned/blob/master/DataStructure/Heapq.md)
 * [해시테이블](https://github.com/keongmini/Today-I-Learned/blob/master/DataStructure/HashTable.md)
 * [그래프 자료구조: DFS, BFS](https://github.com/keongmini/Today-I-Learned/blob/master/DataStructure/Graph.md)
+* [이진탐색트리(BST)](https://github.com/keongmini/Today-I-Learned/blob/master/DataStructure/BST.md)
+* [DFS, BFS 동작과정](https://github.com/keongmini/Today-I-Learned/blob/master/DataStructure/DFSBFS.md)
+* [그리디 알고리즘](https://github.com/keongmini/Today-I-Learned/blob/master/DataStructure/Greedy.md)
 
 ### Front
 front 개발시 공부한 내용, 라이브러리 사용법
@@ -42,7 +47,7 @@ SQL 공부 내용
 개발하면서 발생한 문제 해결 과정
 * [express-validator의 validationResult](https://github.com/keongmini/Today-I-Learned/blob/master/TroubleShooting/express-validator.md)
 * [api errorhanlding 정확하게 하기](https://github.com/keongmini/Today-I-Learned/blob/master/TroubleShooting/api-ErrorHandling.md)
-* [axiod errorhandling 정확하게 하기](https://github.com/keongmini/Today-I-Learned/blob/master/TroubleShooting/axios-ErrorHandling.md)
+* [axios errorhandling 정확하게 하기](https://github.com/keongmini/Today-I-Learned/blob/master/TroubleShooting/axios-ErrorHandling.md)
 * [bcrypt를 이용하여 해시된 비밀번호 비교하기](https://github.com/keongmini/Today-I-Learned/blob/master/TroubleShooting/encrypt-password.md)
 * [express-validator validation chain 으로 조건별 유효성 검사하기](https://github.com/keongmini/Today-I-Learned/blob/master/TroubleShooting/express-validator-validation.md)
 

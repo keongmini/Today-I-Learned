@@ -102,3 +102,5 @@ npm install --save-dev @types/node
 ```
 
 => **개발환경을 잘 꾸리는 것이 중요 - 실수를 미연에 방지, 계속 고쳐나가면서 실력향상**
+
+참고) [패스트캠퍼스 한번에 끝내는 node.js 웹 프로그래밍](https://fastcampus.co.kr/dev_online_node)

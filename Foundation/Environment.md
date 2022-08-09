@@ -103,4 +103,12 @@ npm install --save-dev @types/node
 
 => **개발환경을 잘 꾸리는 것이 중요 - 실수를 미연에 방지, 계속 고쳐나가면서 실력향상**
 
+4. debug
+
+[vscode 에서 디버깅 사용하는 방법]   
+.vscode 파일 내에 launch.json 파일 생성  
+add configurations - 프로젝트에 알맞는 거 선택  
+
+package.json 파일 scripts에 debug로 사용할 명령문 추가 
+
 참고) [패스트캠퍼스 한번에 끝내는 node.js 웹 프로그래밍](https://fastcampus.co.kr/dev_online_node)

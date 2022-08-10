@@ -54,3 +54,6 @@ console.log(x)     // 1
 ```
 
 --> let과 const의 예측가능성과 유지보수성이 var보다 뛰어남, **const > let > var**
+
+
+참고) [패스트캠퍼스 한번에 끝내는 node.js 웹 프로그래밍](https://fastcampus.co.kr/dev_online_node)

@@ -53,4 +53,4 @@ const x = 1
 console.log(x)     // 1
 ```
 
-let과 const의 예측가능성과 유지보수성이 var보다 뛰어남, **const > let > var**
+--> let과 const의 예측가능성과 유지보수성이 var보다 뛰어남, **const > let > var**

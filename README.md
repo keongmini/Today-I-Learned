@@ -14,6 +14,11 @@
 * [트리 bfs로 구현](https://github.com/keongmini/Today-I-Learned/blob/master/Algorithm/Tree.md)
 * [트라이 이해하고 구현하기](https://github.com/keongmini/Today-I-Learned/blob/master/Algorithm/Trie.md)
 * [정렬 알고리즘 문제 풀이 방식](https://github.com/keongmini/Today-I-Learned/blob/master/Algorithm/sorting.md)
+* [파이썬 입력처리](https://github.com/keongmini/Today-I-Learned/blob/master/Algorithm/input_handling.md)
+* [다이나믹 프로그래밍](https://github.com/keongmini/Today-I-Learned/blob/master/Algorithm/dynamic_programming.md)
+* [비트 조작](https://github.com/keongmini/Today-I-Learned/blob/master/Algorithm/bit.md)
+* [최단경로](https://github.com/keongmini/Today-I-Learned/blob/master/Algorithm/Shortest_path.md)
+* [추가적인 그래프 알고리즘](https://github.com/keongmini/Today-I-Learned/blob/master/Algorithm/Graph.md)
 
 ### DataStructure
 자료구조 공부한 내용  
@@ -24,10 +29,30 @@
 * [DFS, BFS 동작과정](https://github.com/keongmini/Today-I-Learned/blob/master/DataStructure/DFSBFS.md)
 * [그리디 알고리즘](https://github.com/keongmini/Today-I-Learned/blob/master/DataStructure/Greedy.md)
 
+### Foundation
+알아둘 기초 내용  
+* [환경 변수 관리하기](https://github.com/keongmini/Today-I-Learned/blob/master/Foundation/config.md)
+* [개발환경 구축하기](https://github.com/keongmini/Today-I-Learned/blob/master/Foundation/Environment.md)
+
 ### Front
 front 개발시 공부한 내용, 라이브러리 사용법
 * [redux-toolkit](https://github.com/keongmini/Today-I-Learned/blob/master/Front/Redux-toolkit.md)
 * [redux-persist](https://github.com/keongmini/Today-I-Learned/blob/master/Front/Redux-persist.md)
+
+### JavaScript
+자바스크립트 언어 공부한 내용  
+* [spread syntax](https://github.com/keongmini/Today-I-Learned/blob/master/JavaScript/spread_syntax.md)
+* [prototype](https://github.com/keongmini/Today-I-Learned/blob/master/JavaScript/prototype.md)
+* [let과 const](https://github.com/keongmini/Today-I-Learned/blob/master/JavaScript/let_const.md)
+* [scope, hoisting](https://github.com/keongmini/Today-I-Learned/blob/master/JavaScript/hoisting.md)
+* [event loop](https://github.com/keongmini/Today-I-Learned/blob/master/JavaScript/event_loop.md)
+* [closrue](https://github.com/keongmini/Today-I-Learned/blob/master/JavaScript/closure.md)
+
+### Node.js
+node.js 공부한 내용  
+* [node.js 개발 전 알아둘 내용](https://github.com/keongmini/Today-I-Learned/blob/master/Node.js/foundation.md)
+* [npm과 npx 차이](https://github.com/keongmini/Today-I-Learned/blob/master/Node.js/npm_npx.md)
+* [require과 module](https://github.com/keongmini/Today-I-Learned/blob/master/Node.js/require.md)
 
 ### SQL
 SQL 공부 내용

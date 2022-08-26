@@ -8,6 +8,8 @@
   > 객체 지향 패러다임을 사용하여 db에서 데이터를 쿼리하고 조작할 수 있는 기술 -> 객체 관계형 매핑 기술  
   > SQL 대신 선택한 프로그래밍 언어로 된 라이브러리 사용  
 
+#### 초기 세팅
+
 1. sequelize 설치
 
 ```npm install sequelize sequelize-cli```
@@ -27,4 +29,16 @@
 명령어 실행시, config, models, seeders 폴더 생성
 
 4. config/config.json
-phase 별로 
+
+phase 별로 연결할 db 정보 환경설정 
+
+5. models/index.js
+
+환경변수 가지고 sequelize 연결
+
+
+#### Model synchronization
+
+db 설계하고 model을 생성한 후 
+
+

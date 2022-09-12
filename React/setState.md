@@ -60,4 +60,6 @@ handleSomething() {
 함수의 결과는 state에 얕게 병합된다. setState 두번째 매개변수 props를 줄 수 있는데 이 매개변수는 setState의 실행이 완료되고 리렌더링된 후에 실행될 함수에 대한 콜백이다.(생략가능)
 
 
-참고. 리액트를 다루는 기술
+참고.   
+리액트를 다루는 기술
+[React - setState()](https://ko.reactjs.org/docs/react-component.html#setstate)

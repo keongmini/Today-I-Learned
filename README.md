@@ -48,11 +48,33 @@ node.js 공부한 내용
 * [node.js 개발 전 알아둘 내용](https://github.com/keongmini/Today-I-Learned/blob/master/Node.js/foundation.md)
 * [npm과 npx 차이](https://github.com/keongmini/Today-I-Learned/blob/master/Node.js/npm_npx.md)
 * [require과 module](https://github.com/keongmini/Today-I-Learned/blob/master/Node.js/require.md)
+* [apidoc 사용법](https://github.com/keongmini/Today-I-Learned/blob/master/Node.js/apidoc.md)
+* [sequelize](https://github.com/keongmini/Today-I-Learned/blob/master/Node.js/sequelize.md)
+* [express - error handling](https://github.com/keongmini/Today-I-Learned/blob/master/Node.js/sequelize.md)
 
 ### React
 front 개발시 공부한 내용, 라이브러리 사용법
+* [React 소개](https://github.com/keongmini/Today-I-Learned/blob/master/React/Introduction.md)
 * [redux-toolkit](https://github.com/keongmini/Today-I-Learned/blob/master/React/Redux-toolkit.md)
 * [redux-persist](https://github.com/keongmini/Today-I-Learned/blob/master/React/Redux-persist.md)
+* [Hooks](https://github.com/keongmini/Today-I-Learned/blob/master/React/Hooks.md)
+* [SSR 이해하기](https://github.com/keongmini/Today-I-Learned/blob/master/React/SSR(1).md)
+* [SSR 데이터로딩](https://github.com/keongmini/Today-I-Learned/blob/master/React/SSR(2).md)
+* [app.js 파일 이해하기](https://github.com/keongmini/Today-I-Learned/blob/master/React/app.md)
+* [비동기처리 구현하기](https://github.com/keongmini/Today-I-Learned/blob/master/React/asynchronous.md)
+* [함수형 컴포넌트와 클래스형 컴포넌트 차이](https://github.com/keongmini/Today-I-Learned/blob/master/React/class-component.md)
+* [이벤트 구현방법](https://github.com/keongmini/Today-I-Learned/blob/master/React/event.md)
+* [immer](https://github.com/keongmini/Today-I-Learned/blob/master/React/immer.md)
+* [jsx 기초](https://github.com/keongmini/Today-I-Learned/blob/master/React/jsx.md)
+* [라이프사이클 이해하기](https://github.com/keongmini/Today-I-Learned/blob/master/React/life-cycle.md)
+* [성능 최적화](https://github.com/keongmini/Today-I-Learned/blob/master/React/performance-optimization.md)
+* [props 이해하기](https://github.com/keongmini/Today-I-Learned/blob/master/React/props.md)
+* [react-router-dom](https://github.com/keongmini/Today-I-Learned/blob/master/React/react-router.md)
+* [ref](https://github.com/keongmini/Today-I-Learned/blob/master/React/ref.md)
+* [setState 추가 이해하기](https://github.com/keongmini/Today-I-Learned/blob/master/React/setState.md)
+* [state 이해하기](https://github.com/keongmini/Today-I-Learned/blob/master/React/state.md)
+* [useMemo와 useCallback 차이](https://github.com/keongmini/Today-I-Learned/blob/master/React/useMemo%26useCallback.md)
+* [useReducer 이해하기](https://github.com/keongmini/Today-I-Learned/blob/master/React/useReducer.md)
 
 ### SQL
 SQL 공부 내용
@@ -67,6 +89,7 @@ SQL 공부 내용
 * [접근권한 인증방식](https://github.com/keongmini/Today-I-Learned/blob/master/Study/authorization-manage.md)
 * [webview - javascript bridge](https://github.com/keongmini/Today-I-Learned/blob/master/Study/javascript-bridge.md)
 * [server 인증방식](https://github.com/keongmini/Today-I-Learned/blob/master/Study/Authentication.md)
+* [SPA](https://github.com/keongmini/Today-I-Learned/blob/master/Study/SPA.md)
 
 ### TroubleShooting
 개발하면서 발생한 문제 해결 과정
@@ -75,6 +98,7 @@ SQL 공부 내용
 * [axios errorhandling 정확하게 하기](https://github.com/keongmini/Today-I-Learned/blob/master/TroubleShooting/axios-ErrorHandling.md)
 * [bcrypt를 이용하여 해시된 비밀번호 비교하기](https://github.com/keongmini/Today-I-Learned/blob/master/TroubleShooting/encrypt-password.md)
 * [express-validator validation chain 으로 조건별 유효성 검사하기](https://github.com/keongmini/Today-I-Learned/blob/master/TroubleShooting/express-validator-validation.md)
+* [sequelize model define](https://github.com/keongmini/Today-I-Learned/blob/master/TroubleShooting/Seqeulize_define_model.md)
 
 ### git
 git 사용하며 배운 내용

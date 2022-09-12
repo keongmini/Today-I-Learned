@@ -34,11 +34,6 @@
 * [환경 변수 관리하기](https://github.com/keongmini/Today-I-Learned/blob/master/Foundation/config.md)
 * [개발환경 구축하기](https://github.com/keongmini/Today-I-Learned/blob/master/Foundation/Environment.md)
 
-### Front
-front 개발시 공부한 내용, 라이브러리 사용법
-* [redux-toolkit](https://github.com/keongmini/Today-I-Learned/blob/master/Front/Redux-toolkit.md)
-* [redux-persist](https://github.com/keongmini/Today-I-Learned/blob/master/Front/Redux-persist.md)
-
 ### JavaScript
 자바스크립트 언어 공부한 내용  
 * [spread syntax](https://github.com/keongmini/Today-I-Learned/blob/master/JavaScript/spread_syntax.md)
@@ -53,6 +48,11 @@ node.js 공부한 내용
 * [node.js 개발 전 알아둘 내용](https://github.com/keongmini/Today-I-Learned/blob/master/Node.js/foundation.md)
 * [npm과 npx 차이](https://github.com/keongmini/Today-I-Learned/blob/master/Node.js/npm_npx.md)
 * [require과 module](https://github.com/keongmini/Today-I-Learned/blob/master/Node.js/require.md)
+
+### React
+front 개발시 공부한 내용, 라이브러리 사용법
+* [redux-toolkit](https://github.com/keongmini/Today-I-Learned/blob/master/React/Redux-toolkit.md)
+* [redux-persist](https://github.com/keongmini/Today-I-Learned/blob/master/React/Redux-persist.md)
 
 ### SQL
 SQL 공부 내용

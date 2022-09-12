@@ -20,7 +20,7 @@ useMemo로 전달하는 값은 '생성함수'와 해당함수의 '의존성 값�
 
 아래 코드처럼 작성하게 되면 [a,b]값이 변경될 때만 생성함수(computeExpensiveValue)가 수행된다.
 
-```const memoizedValue = useMemo(() => computeExpensiveValue(a, b), [a, b]);```
+```const memoizedValue = useMemo(() => computeExpensiveValue(a, b), [a, b]);```   
 사용하는 용어가 어렵게 느껴지지만 결국 두번째 파라미터로 전달하는 배열 내에 있는 값이 변경될 경우 첫번째에 전달하는 함수에 해당값을 전달하여 해당 작업을 수행한다는 의미이다.
 
 
@@ -39,7 +39,7 @@ const memoizedCallback = useCallback(
 ```
 
 
-결론
+**결론**
 
 useMemo와 useCallback 모두 렌더링 성능 최적화를 위해 사용하는 것임은 동일하다. useMemo는 값을 전달하기 때문에 주로 문자열, 숫자 등을 다루는 일반적인 경우에 사용되고 useCallback은 함수를 전달하기 때문에 (좀 더 복잡한 내용이 있는) 함수를 전달할 경우 사용한다. 
 

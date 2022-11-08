@@ -12,3 +12,9 @@
   - 가중치를 기준으로 간선 정보 정렬
   - 정렬 순서대로 확인하되 사이클이 생기는 경우 뛰어넘기
   - 모든 간선을 확인할 때까지 진행
+
+3. 사이클 여부 판단 - [Union-Find](https://github.com/keongmini/Today-I-Learned/blob/master/Algorithm/Union-Find.md) 사용
+  
+
+참고.  
+[알고리즘 - 크루스칼 알고리즘(Kruskal Algorithm), 최소 신장 트리(MST)](https://chanhuiseok.github.io/posts/algo-33/)

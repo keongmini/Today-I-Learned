@@ -256,4 +256,208 @@ console.log(person);         // {name: 'Kim'}
       > 순수함수: 외부 상태를 변경하지 않고 외부 상태에 의존하지 않는 함수       
       > 함수형 프로그래밍: 순수 함수를 통해 부수효과를 최대한 억제, 오류를 피하고 프로그램의 안정성 높이는 프로그래밍 패러다임
 
+## 함수의 형태
+1. 즉시 실행 함수      
+   - 함수 정의와 동시에 즉시 호출되는 함수, 단 한번만 호출되고 다시 호출할 수 없음
+     ```javascript
+     (function(){
+       var a = 3;
+       var b = 5;
+       return a * b;
+     }());
+     ```
+   - 일반적으로 익명함수 사용
+   - 기명함수도 사용할 수 는 있지만 그룹 연산자 내의 기명함수는 함수 리터럴로 평가되기 때문에 함수 몸체 외부에서 참조할 수 없음 - 호출 불가
+     ```javascript
+     (function foo()}{
+       var a = 3;
+       var b = 5;
 
+       return a * b;
+     }());
+
+     foo();            // ReferenceError: foo is not defined
+     ```
+   - 반드시 그룹 연산자 ( ) 로 감싸야 함
+     ```javascript
+     function(){
+        ...
+     }();              // SyntaxError: Finction statements require a function name
+     ```
+     그룹 연산자로 감싸지 않았기 때문에 즉시 실행 함수로 인식하지 않음, 함수 선언문으로 인식       
+     -> 함수 정의가 함수 선언문 형식에 맞지 않아서 오류 발생(함수 선언문은 이름 생략 불가
+
+     ```javascript
+     function foo(){
+       ...
+     }();              // SyntaxError: Unexpected token ')'
+     ```
+     세미콜론 자동 삽입 기능에 의해 함수 선언문이 끝나는 위치에 세미콜론이 암묵적으로 추가 됨       
+     -> 함수 선언문 뒤의 ( )는 그룹 연산자로 해석되고, 그룹 연산자의 피연산자가 없기 때문에 오류 발생
+
+     **그룹 연산자로 함수를 묶는 이유**: 먼저 함수 리터럴로 평가 후 함수 객체 생성하기 위해     
+     -> 함수 객체 생성 후에는 그룹 연산자 외의 연산자 사용 가능
+       ```javascript
+       (function () {
+         ....
+       }());
+
+       (function () {
+         ...
+       })();
+
+       !function () {
+         ...
+       }();
+
+       +function () {
+         ...
+       }();
+       ```
+     - 일반 함수처럼 값 반환, 인수 전달 가능
+     - 즉시 실행 함수 내에 코드를 모아 두면 변수나 함수의 이름 충돌 방지 가능
+    
+2. 재귀 함수
+   - 자기 자신을 호출하는 재귀 호출을 수행하는 함수
+   - 반복되는 처리를 위해 재쉬 함수 사용
+     ```javascript
+     function countdown (n) {
+       for (var i = n; i >= 0; i--) console.log(i);
+     }
+     countdown(10);
+
+
+     // 위 반복문 코드를 재귀로 구현
+     function countdown (n) {
+       if (n < 0) return;
+       console.log(n);
+       countdown(n - 1);
+     }
+     
+     countdown(10;
+     ```
+   - 함수 이름은 함수 몸체 내부에서 유효하기 때문에 함수 내부에서 함수 이름을 사용해 재귀 호출 가능       
+     <-> 함수 외부에서 함수를 호출할 때는 함수를 가리키는 식별자로 해야 함
+       ```javascript
+       var factorial = function foo(n){
+           if (n <= 1) return 1;
+
+           return n * factorial(n - 1);
+           // return n * foo(n - 1); 과 동일
+       };
+
+       console.log(factorial(5));
+       ```
+   - 재귀 함수는 자신을 무한 재귀 호출하기 때문에 재귀 호출을 멈출 수 있는 탈출 조건 필수
+
+3. 중첩 함수
+   - 함수 내부에 정의된 함수 = 내부함수 <-> 중첩 함수를 포함하는 함수 = 외부 함수
+   - 중첩함수는 외부 함수 내부에서만 호출 가능
+   - 자신을 포함하는 외부 함수를 돕는 헬퍼 역할
+     ```javascript
+     function outer() {
+       var x = 1;
+
+       function inner() {
+         var y = 2;
+         console.log(x + y);      // 3
+       }
+
+       inner();
+     }
+
+     outer();
+     ```
+   - ES6 부터: 문이 위치할 수 있는 문맥이라면 어디든 함수 정의 가능      
+     코드 블록 내에서도 정의 가능하지만 호이스팅으로 인해 문제 발생 가능하기 때문에 권장 x
+
+4. 콜백 함수
+   - 함수의 매개변수를 통해 다른 함수의 내부로 전달되는 함수
+     
+   ```javascript
+   function repeat1(n) {
+     for (var i = 0; i < n; i++) console.log(i);
+   }
+
+   repeat(5);      // 0 1 2 3 4
+
+   function repeat2(n) {
+     for (var i = 0; i < n; i++){
+       if (i % 2) console.log(i);
+     }
+   }
+
+   repeat2(5);    // 1 3
+   ```
+   위 코드처럼 반복은 동일하게 진행되지만 반복문 속 내용이 다른 경우 함수의 일부분이 다르기 때문에 새롭게 정의해야 함    
+   -> 함수 합성으로 해결: 공통 로직은 미리 정의 후, 변경되는 로직은 추상화해서 함수 외부에서 내부로 전달
+   ```javascript
+   function repeat(n, f) {
+     for (var i = 0; i < n; i++) {
+       f(i);
+     }
+   }
+
+   var logAll = function (i) {
+     console.log(i);
+   };
+
+   repeat(5, logAll);              // 0 1 2 3 4
+
+   var logOdds = function (i) {
+     if (i % 2) console.log(i);
+   };
+
+   repeat(5, logOdds);            // 1 3
+   ```
+   변경되는 로직은 f로 추상화하고 외부에서 전달받음 (자바스크립트의 함수는 입급 객체로 함수를 함수의 매개변수로 전달 가능)
+
+   - 고차 함수: 매개변수를 통해 함수의 외부에서 콜백 함수를 전달받은 함수
+     - 콜백함수는 고차함수에 전달되어 헬퍼 함수 역할을 함, 고차 함수는 콜백함수를 자신의 일부분으로 합성
+     - 고차함수는 매개변수를 통해 전달받은 콜백함수의 호출 시전을 결정해서 호출 = 고차함수에 의해 콜백함수 호출, 고차함수는 콜백함수에 인수 전달 가능
+     - 콜백함수가 고차 함수 내에서만 호출될 경우, 일반적으로 콜백 함수를 익명 함수 리터럴로 정의하여 바로 고차 함수로 전달
+       ```javascript
+       repeat(5, function (i){
+         ...
+       });
+       ```
+       고차함수가 호출될 때마다 콜백함수를 평가하여 함수 객체 생성
+
+5. 순수 함수와 비순수 함수
+   - 순수 함수: 어떤 외부 상태에 의존하지도 않고 외부 상태를 변경하지도 않는 - 부수 효과가 없는 함수
+     - 동일한 인수가 전달되면 언제나 동일한 값 반환 = 오직 매개변수를 통해 함수 내부로 전달되는 인수에만 의존
+     - 최소 하나 이상의 인수 전달받음 (인수를 전달받지 않는 순수 함수는 상수와 같음)
+     - 인수를 변경하지 않음 - 인수의 불변성 유지
+     - 함수의 외부 상태를 변경하지 않음
+     ```javascript
+     var count = 0;
+
+     function increase(n) {
+       return ++n;
+     }
+
+     count = increase(count);
+     console.log(count);            // 1
+
+     count = increase(count);
+     console.log(count);            // 2
+     ```
+   - 비순수 함수: 외부 상태에 의존하거나 외부 상태를 변경하는 - 부수 효과가 있는 함수
+     ```javascript
+     var count = 0;
+
+     function increase() {
+       return ++count;
+     }
+
+     increase();
+     console.log(count);            // 1
+
+     increase();
+     console.log(count);            // 2
+     ```
+     순수 함수와 달리 외부 상태에 의존하기 때문에 인수 전달 필요 없음, 외부 상태를 변경하기 때문에 재할당해줄 필요 없음
+     - 함수가 외부 상태를 변경하면 추적이 어렵기 때문에 순수 함수 사용 권장
+    
+    - 함수형 프로그래밍: 순수 함수와 보조 함수의 조합을 통해 외부 상태를 변경하는 부수 효과를 최소화해서 불변성 지향     
+      -> 순수 함수를 통해 부수 효과를 최대한 억제해서 오류를 줄이고 프로그램의 안정성을 높이는 것이 목표

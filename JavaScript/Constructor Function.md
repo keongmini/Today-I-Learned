@@ -138,3 +138,102 @@ const circle = new Circle(5);
     -> 함수가 할당된 위치가 아닌 함수 정의 방식에 따라 constructor와 non-constructor 구분
 
 * 주의! 생성자 함수로서 호출될 것을 기대하고 정의하지 않은 일반 함수(callable, constructor)에 new 연산자를 붙여 호출하면 생성자 함수로 동작 가능
+
+### new 연산자
+- new 연산자와 함께 함수 호출하면 해당 함수는 생성자 함수로 동작 => 함수 객체의 내부 메소드 [Constructor]] 호출        
+  이때, 연산자와 함께 호출하는 함수는 constructor
+  ```javascript
+  // 일반 함수
+  
+  function add(x, y) {
+    return x + y;
+  }
+
+  let inst = new add();
+
+  // 함수가 객체를 반환하지 않았기 때문에 반환문 무시 - 빈 객체 반환
+  console.log(inst);          // {}
+
+  function createUser(name, role) {
+    return { name, role };
+  }
+
+  inst = new createUser('Lee', 'admin');
+
+  // 함수가 생성한 객체 반환
+  console.log(inst);         // {name: 'Lee', role: 'admin'};
+  ```
+
+- new 연산자 없이 생성자 함수를 호출하면 일반 함수로 호출 => [[Call]] 호출
+  ```javascript
+  // 생성자 함수
+  
+  function Circle(radius) {
+    this.radius = radius;
+    this.getDiameter = function () {
+      return 2 * this.radius;
+    };
+  }
+
+  // new 연산자 없이 생성자 함수 호출
+  const circle = Circle(5);
+
+  console.log(circle);          // undefined
+  ```
+  - 생성자 함수를 일반 함수로 호출하면 함수 내부 this는 전역 객체 window를 가리킴
+  - radius 프로퍼티, getDiameter 메서드는 전역 객체의 프로퍼티와 메서드가 됨
+
+### new.target
+생성자 함수가 new 연산자 없이 호출되는 것을 방지하기 위해 파스칼 케이스 컨벤션 사용 -> 그럼에도 실수가 발생할 수 있기 때문에 ES6에서는 new.target 지원
+
+- new.target은 this와 유사하게 constructor인 모든 함수 내부에서 암묵적인 지연 변수와 같이 사용되며 메타 프로퍼티라고 부름(IE에서는 지원 x)
+- new 연산자와 함께 생성자 함수로서 호출되면 함수 내부의 new.target은 함수 자실을 가리킴       
+  -> new 연산자 없이 일반 함수로서 호출된 함수 내부의 new.target = undefined        
+  -> 함수 내부에서 new.target을 사용하여 new 연산자와 생성자 함수로 호출됐는지 확인 가능
+
+  ```javascript
+  function Circle(radius) {
+    // 생성자 함수로 호출하지 않은 경우 new 연산자 사용하여 재귀 호출 -> 생성자 함수로 호출
+    if (!new.target) {
+      return new Circle(radius);
+    }
+
+    this.radius = radius;
+    this.getDiameter = function () {
+      return 2 * this.radius;
+    }
+  }
+
+  const circle = Circle(5);      // new 연산자 없이 생성자 함수 호출해도 new.target을 통해 생성자 함수 호출 가능
+  console.log(circle.getDiameter());
+  ```
+
+  > [스코프 세이프 생성자 패턴]       
+  > new.target은 IE에서 지원하지 않음 -> 스코프 세이프 생성자 패턴 사용
+  >
+  > ```javascript
+  > function Circle(radius) {
+  >   if(!(this instanceof Circle)) {
+  >     return new Circle(radius);
+  >   }
+  >
+  >   this.radius = radius;
+  >   this.getDiameter = function () {
+  >     return 2 * this.radius;
+  >   }
+  > }
+  >
+  > const circle = Circle(5);
+  > ```
+
+- Object, Function: new 연산자 없이 호출했을 때, new 연산자와 함께 호출했을 때 동일
+- String, Number, Boolean: new 연산자 없이 호출했을 때 - String, Number, Boolean 객체 생성 후 반환 <-> new 연산자 없이 호출했을 때 - 문자여르 숫자, 불리언 값 반환
+
+
+
+
+
+
+
+
+

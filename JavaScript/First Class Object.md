@@ -36,3 +36,8 @@ functuin makeCounter (aux) {
 -> 함수를 객체와 동일하게 사용할 수 있다는 의미 -> 객체는 값이므로 함수는 값과 동일하게 취급 가능
 
 일반 객체는 호출할 수 없지만 함수 객체는 호출 가능, 함수 객체는 함수 고유의 프로퍼티 소유 -> 일반 객체와의 차이점
+
+## 함수 객체의 프로퍼티
+함수 객체 고유의 프로퍼티: arguments, caller, length, name, prototype
+
+> Object.prototype 객체의 ```__proto__``` 접근자 프로퍼티는 모든 객체에서 사용 가능
